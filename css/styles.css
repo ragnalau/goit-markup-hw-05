@@ -238,9 +238,11 @@ a {
 
 .apps__images {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
 }
 
 .apps__image {
@@ -254,6 +256,15 @@ a {
   font-weight: 700;
   line-height: 42px;
   margin-bottom: 50px;
+  text-align: center;
+}
+
+.apps__overlay-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.41px;
+  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -582,4 +593,18 @@ a {
 .about__icon {
   width: 70px;
   height: 70px;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #2f303acc;
+  width: 370px;
+  height: 70px;
+}
+
+.overlay-box {
+  bottom: 0;
 }
