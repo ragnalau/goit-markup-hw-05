@@ -73,12 +73,35 @@ a {
 }
 
 .header__navigation li {
-  padding-bottom: 32px;
+  position: relative;
+  transition-duration: 500ms;
+  padding-bottom: 30px;
 }
+
+/*
 .header__navigation li:hover {
   border-bottom: 4px solid var(--blue);
   /* border-radius: 2px; */
-  padding-bottom: 28px;
+/* padding-bottom: 28px;
+} */
+
+.header__navigation li::after,
+.header__navigation li:after {
+  content: "";
+  height: 4px;
+  width: 0;
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: var(--blue);
+  transition-duration: 0.5s;
+  transition-property: width;
+}
+
+.header__navigation li:hover::after,
+.header__navigation li:active::after {
+  width: 100%;
 }
 
 .header__navigation {
