@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homework 4</title>
+  <title>Studio</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@latest/modern-normalize.css" />
   <link rel="stylesheet" href="./css/styles.css" />
@@ -53,7 +53,7 @@
           EFFECTIVE SOLUTIONS FOR <br /> YOUR BUSINESS
         </h1>
 
-        <button class="hero-section__request button" type="button">
+        <button data-modal-open class="hero-section__request button" type="button">
           Request our service
         </button>
       </div>
@@ -319,6 +319,19 @@
       </div>
     </div>
   </footer>
+  <div data-modal class="is-hidden">
+    <div data-modal-content>
+      <h2>Modal title</h2>
+      <p>
+        Lorem ipsum dolar sit amet consectetur adpisicing
+      </p>
+      <button data-modal-close class="modal-close-button" type=" button">
+        x
+      </button>
+    </div>
+  </div>
+  <script src="./modal.js">
+  </script>
 </body>
 
 </html>

@@ -59,6 +59,9 @@ a {
 }
 
 .header__logo a {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 700;
   font-size: 26px;
   line-height: 30px;
@@ -83,6 +86,9 @@ a {
 }
 
 .header__navigation a {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -93,6 +99,9 @@ a {
 }
 
 .header__info a {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--grey);
   font-size: 14px;
   font-weight: 500;
@@ -175,6 +184,9 @@ a {
 
 /* BUTTON  */
 .button {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
@@ -338,6 +350,9 @@ a {
 }
 
 .team__social li {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   padding: 12px;
@@ -380,6 +395,9 @@ a {
 }
 
 .customer__logo {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #afb1b8;
   max-width: 93px;
   height: auto;
@@ -394,6 +412,9 @@ a {
 }
 
 .customer__space {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,6 +440,9 @@ a {
 }
 
 .footer__logo {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-family: var(--secondary-font);
   margin-bottom: 28px;
 }
@@ -446,6 +470,9 @@ a {
 }
 
 .footer__info a {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 12px;
   text-decoration: none;
   font-size: 14px;
@@ -454,7 +481,7 @@ a {
   color: var(--grey);
 }
 
-.footer__info a:hover {
+.footer__info > a:hover {
   color: var(--blue);
 }
 
@@ -514,6 +541,9 @@ a {
 }
 
 .hero-section__buttons button {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   background-color: var(--bground);
   font-size: 16px;
@@ -565,6 +595,9 @@ a {
 }
 
 .hero-section__portofolio li {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -578,13 +611,36 @@ a {
 .portofolio {
   background-color: white;
   border: 1px solid #eeeeee;
+  position: relative;
+  overflow: hidden;
 }
 
 .portofolio img {
   max-width: 100%;
   height: auto;
 }
+.portofolio-text {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--white);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  padding-top: 87px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 65px;
+}
 
+.portofolio-overlap:hover .portofolio-text {
+  opacity: 1;
+  transform: translateY(-100%);
+}
 .container {
   width: 1200px;
   margin: auto;
@@ -607,4 +663,46 @@ a {
 
 .overlay-box {
   bottom: 0;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-modal] {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+[data-modal-content] {
+  width: 528px;
+  height: 581px;
+  background-color: var(--white);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+[data-modal-close] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-close-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
 }
